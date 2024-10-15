@@ -12,6 +12,8 @@ const numberRule = document.getElementById('number-rule');
 const specialRule = document.getElementById('special-rule');
 // Progress bar
 const progressBar = document.getElementById('bar');
+// Show password btn
+const showBtn = document.getElementById('show-password');
 // *****DOM ELEMENTS*****
 
 
@@ -125,14 +127,25 @@ function checkPassword() {
 }
 
 function showPassword() {
-    
+    if (input.type === 'password') {
+        input.type = 'text';
+        showBtn.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
+    } else {
+        input.type = 'password'
+        showBtn.innerHTML = '<i class="fa-solid fa-eye"></i>';
+    }
 }
 
 // *****FUNCTIONS*****
 
 // *****EVENT LISTENERS*****
+// Check password
 input.addEventListener('keyup', () => {
     password = input.value;
     checkPassword();
 });
+// Show/Hide Password
+showBtn.addEventListener('click', () => {
+    showPassword();
+})
 // *****EVENT LISTENERS*****
