@@ -9,6 +9,8 @@ const charRule = document.getElementById('char-rule');
 const capitalRule = document.getElementById('capital-rule');
 const numberRule = document.getElementById('number-rule');
 const specialRule = document.getElementById('special-rule');
+// Progress bar
+const progressBar = document.getElementById('progress-bar')
 
 // FUNCTIONS
 // Password Checker
@@ -63,10 +65,10 @@ input.addEventListener('keyup', (e) => {
     }
     // If contains apply style
     if (containsSpecialChars(password)) {
-        specialRule.innerHTML = '<i class="fa-solid fa-check"></i> At least a special characters';
+        specialRule.innerHTML = '<i class="fa-solid fa-check"></i> At least 1 special character';
         specialRule.classList.add('text-success');
     } else {
-        specialRule.innerHTML = '<i class="fa-solid fa-x"></i> At least a special characters'
+        specialRule.innerHTML = '<i class="fa-solid fa-x"></i> At least 1 special character'
         specialRule.classList.remove('text-success');
     }
 })

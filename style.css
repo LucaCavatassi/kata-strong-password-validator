@@ -13,4 +13,8 @@ body {
 #rules-list{
     list-style-type: none;
 }
+
+.progress {
+    height: 20px;
+}
 /* COMMON */
