@@ -51,15 +51,20 @@ function updateProgressBar(conditionCount) {
         progressBar.classList.add('bg-danger');
         // Info text progress
         progressBar.innerHTML = 'Your password is weak!';
+        // Set aria value
+        progressBar.setAttribute('aria-valuenow', widthPercentage);
     } else if (widthPercentage === 50) {
         progressBar.classList.add('bg-warning');
         progressBar.innerHTML = 'Your password is still weak!';
+        progressBar.setAttribute('aria-valuenow', widthPercentage);
     } else if (widthPercentage === 75) {
         progressBar.classList.add('bg-info');
         progressBar.innerHTML = "C'mon you can make it!";
+        progressBar.setAttribute('aria-valuenow', widthPercentage);
     } else if (widthPercentage === 100) {
         progressBar.classList.add('bg-success');
         progressBar.innerHTML = "Now we're good!";
+        progressBar.setAttribute('aria-valuenow', widthPercentage);
     }
     // // Type the percentage as text
     // progressBar.innerHTML += `${widthPercentage}%`;
