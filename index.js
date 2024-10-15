@@ -123,6 +123,11 @@ function checkPassword() {
     // Update the progress bar based on number of conditions met
     updateProgressBar(conditionCount);
 }
+
+function showPassword() {
+    
+}
+
 // *****FUNCTIONS*****
 
 // *****EVENT LISTENERS*****
