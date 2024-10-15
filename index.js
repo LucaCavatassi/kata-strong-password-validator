@@ -1,9 +1,3 @@
-// Wait for the DOM to fully load before initializing
-document.addEventListener('DOMContentLoaded', function () {
-    const tooltipTrigger = document.querySelector('#show-password');
-    new bootstrap.Tooltip(tooltipTrigger);
-});
-
 // *****VARS*****
 let password = '';
 // *****VARS*****
@@ -21,7 +15,6 @@ const progressBar = document.getElementById('bar');
 // Show password btn
 const showBtn = document.getElementById('show-password');
 // *****DOM ELEMENTS*****
-
 
 // *****FUNCTIONS*****
 // HELPERS
@@ -141,7 +134,6 @@ function showPassword() {
         showBtn.innerHTML = '<i class="fa-solid fa-eye"></i>';
     }
 }
-
 // *****FUNCTIONS*****
 
 // *****EVENT LISTENERS*****
@@ -150,8 +142,13 @@ input.addEventListener('keyup', () => {
     password = input.value;
     checkPassword();
 });
-// Show/Hide Password
+// Show/Hide password on click
 showBtn.addEventListener('click', () => {
     showPassword();
 })
+// Show/Hide password tooltip
+document.addEventListener('DOMContentLoaded', function () {
+    const tooltipTrigger = document.getElementById('show-password');
+    new bootstrap.Tooltip(tooltipTrigger);
+});
 // *****EVENT LISTENERS*****
