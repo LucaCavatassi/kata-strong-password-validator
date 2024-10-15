@@ -33,11 +33,17 @@
             <!-- TITLE -->
 
             <!-- LABEL + INPUT -->
-            <label class="text-muted pb-2 ps-1" for="password">Password*</label>
-            <input type="text" name="password" id="password" class="form-control py-3" placeholder="Type your password here...">
+            <label class="text-muted pb-2 ps-1 fs-5" for="password">Password*</label>
+            <input type="text" name="password" id="password" class="form-control py-3 mb-4" placeholder="Type your password here...">
             <!-- LABEL + INPUT -->
 
             <!-- RULES -->
+            <ul id="rules-list" class="fs-5 ps-1 text-muted">
+                <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-x"></i> At least 9 characters</li>
+                <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-x"></i> At least 1 capital letter</li>
+                <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-x"></i> At least 1 number</li>
+                <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-x"></i> At least a special character</li>
+            </ul>
             <!-- RULES -->
         </div>
     </div>

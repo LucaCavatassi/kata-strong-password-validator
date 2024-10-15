@@ -9,4 +9,8 @@ body {
     font-family: 'Kanit', Arial, Helvetica, sans-serif;
     background-color: cornflowerblue;
 }
+
+#rules-list{
+    list-style-type: none;
+}
 /* COMMON */
