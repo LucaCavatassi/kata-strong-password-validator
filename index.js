@@ -11,7 +11,7 @@ const capitalRule = document.getElementById('capital-rule');
 const numberRule = document.getElementById('number-rule');
 const specialRule = document.getElementById('special-rule');
 // Progress bar
-const progressBar = document.getElementById('Bar');
+const progressBar = document.getElementById('bar');
 // *****DOM ELEMENTS*****
 
 
@@ -45,18 +45,24 @@ function updateProgressBar(conditionCount) {
     // Update bar based on percentage
     // Remove every class may be applied
     progressBar.classList.remove('bg-danger', 'bg-warning', 'bg-info', 'bg-success');
-    // If a condition is met apply a certain class
+    // If a condition is met apply class and text
     if (widthPercentage === 25) {
+        // Apply color
         progressBar.classList.add('bg-danger');
+        // Info text progress
+        progressBar.innerHTML = 'Your password is weak!';
     } else if (widthPercentage === 50) {
         progressBar.classList.add('bg-warning');
+        progressBar.innerHTML = 'Your password is still weak!';
     } else if (widthPercentage === 75) {
         progressBar.classList.add('bg-info');
+        progressBar.innerHTML = "C'mon you can make it!";
     } else if (widthPercentage === 100) {
         progressBar.classList.add('bg-success');
+        progressBar.innerHTML = "Now we're good!";
     }
-    // Type the percentage as text
-    progressBar.innerHTML = `${widthPercentage}%`;
+    // // Type the percentage as text
+    // progressBar.innerHTML += `${widthPercentage}%`;
 }
 
 // CHECK PASSWORD
