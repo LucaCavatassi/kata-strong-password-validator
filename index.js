@@ -1,3 +1,9 @@
+// Wait for the DOM to fully load before initializing
+document.addEventListener('DOMContentLoaded', function () {
+    const tooltipTrigger = document.querySelector('#show-password');
+    new bootstrap.Tooltip(tooltipTrigger);
+});
+
 // *****VARS*****
 let password = '';
 // *****VARS*****

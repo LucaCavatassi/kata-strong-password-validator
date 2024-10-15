@@ -37,10 +37,12 @@
             <label class="text-muted pb-2 ps-1 fs-5" for="password">Password*</label>
             <div class="input-group mb-4">
                 <input type="password" name="password" id="password" aria-label="password" class="form-control p-2" placeholder="Type your password here...">
-                <button class="input-group-text" id="show-password"><i class="fa-solid fa-eye"></i></button>
+                <button type="button" class="input-group-text" id="show-password" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Show/Hide Password">
+                    <i class="fa-solid fa-eye"></i>
+                </button>
             </div>
             <!-- LABEL + INPUT -->
-
+            
             <!-- RULES -->
             <ul id="rules-list" class="fs-5 ps-1 text-muted">
                 <li id="char-rule" class="d-flex align-items-center gap-2"><i class="fa-solid fa-x"></i> At least 9 characters</li>
