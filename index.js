@@ -1,5 +1,7 @@
 const input = document.getElementById('password');
+let password = '';
 
 input.addEventListener('keyup', (e) => {
-    console.log(e.key)
+    password += e.key
 })
+
