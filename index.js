@@ -1,11 +1,13 @@
 // DOM ELEMENTS
+
 // INPUT
 const input = document.getElementById('password');
-// LI RULES 
+// LI ELEMS 
 const charRule = document.getElementById('char-rule');
 const capitalRule = document.getElementById('capital-rule');
 const numberRule = document.getElementById('number-rule');
 const specialRule = document.getElementById('special-rule');
+
 // DOM ELEMENTS
 
 // VARS
@@ -23,11 +25,17 @@ input.addEventListener('keyup', (e) => {
         charRule.classList.add('text-success')
     }
 
-    // // CAPITAL RULE
-    // if (password.length > 8 ) {
-    //     capitalRule.innerHTML = '<i class="fa-solid fa-check"></i> At least 1 capital letter'
-    //     capitalRule.classList.add('text-success')
-    // }
+    // CAPITAL RULE
+    // Check if contains
+    function containsCapitalLetter(str) {
+        const capitalChars = /[A-Z]/;
+        return capitalChars.test(str);
+    }
+    // If contains apply style
+    if (containsCapitalLetter(password)){
+        capitalRule.innerHTML = '<i class="fa-solid fa-check"></i> At least 1 capital letter'
+        capitalRule.classList.add('text-success')
+    }
 
     // NUMBER RULE
     if (password.includes(1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9) ) {
