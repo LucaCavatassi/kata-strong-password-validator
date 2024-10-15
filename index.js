@@ -14,12 +14,15 @@ const specialRule = document.getElementById('special-rule');
 // Password Checker
 input.addEventListener('keyup', (e) => {
     // SAVE PASSWORD
-    password += e.key
+    password = input.value
 
     // PASS LENGTH RULE
     if (password.length > 8 ) {
         charRule.innerHTML = '<i class="fa-solid fa-check"></i> At least 9 characters';
         charRule.classList.add('text-success');
+    } else {
+        charRule.innerHTML = '<i class="fa-solid fa-x"></i> At least 9 characters';
+        charRule.classList.remove('text-success');
     }
 
     // CAPITAL RULE
@@ -32,6 +35,9 @@ input.addEventListener('keyup', (e) => {
     if (containsCapitalLetter(password)){
         capitalRule.innerHTML = '<i class="fa-solid fa-check"></i> At least 1 capital letter';
         capitalRule.classList.add('text-success');
+    } else {
+        capitalRule.innerHTML = '<i class="fa-solid fa-x"></i> At least 1 capital letter'
+        capitalRule.classList.remove('text-success');
     }
 
     // NUMBER RULE
@@ -44,6 +50,9 @@ input.addEventListener('keyup', (e) => {
     if (containsNumbers(password)) {
         numberRule.innerHTML = '<i class="fa-solid fa-check"></i> At least 1 number';
         numberRule.classList.add('text-success');
+    } else {
+        numberRule.innerHTML = '<i class="fa-solid fa-x"></i> At least 1 number'
+        numberRule.classList.remove('text-success');
     }
 
     // SPECIAL RULE
@@ -56,5 +65,8 @@ input.addEventListener('keyup', (e) => {
     if (containsSpecialChars(password)) {
         specialRule.innerHTML = '<i class="fa-solid fa-check"></i> At least a special characters';
         specialRule.classList.add('text-success');
+    } else {
+        specialRule.innerHTML = '<i class="fa-solid fa-x"></i> At least a special characters'
+        specialRule.classList.remove('text-success');
     }
 })
