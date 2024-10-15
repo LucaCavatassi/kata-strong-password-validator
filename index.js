@@ -142,10 +142,12 @@ input.addEventListener('keyup', () => {
     password = input.value;
     checkPassword();
 });
+
 // Show/Hide password on click
 showBtn.addEventListener('click', () => {
     showPassword();
-})
+});
+
 // Show/Hide password tooltip
 document.addEventListener('DOMContentLoaded', function () {
     const tooltipTrigger = document.getElementById('show-password');
